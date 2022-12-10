@@ -25,9 +25,9 @@ type Server struct {
 //	return nil
 //}
 
-func (s *Server) GetUser(ctx context.Context, req *proto.GetUserRequest) (*proto.GetUserResponse, error) {
+func (s *Server) GetUser(ctx context.Context, req *user.GetUserRequest) (*user.GetUserResponse, error) {
 	log.Print("GetUser called")
-	mocked := &proto.GetUserResponse{
+	mocked := &user.GetUserResponse{
 		Id:   "123",
 		Name: "test",
 	}
